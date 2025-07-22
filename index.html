@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Latest Uploads</title>
+</head>
+<body>
+  <h1>📺 Recent Videos from My Channel</h1>
+  <ul id="video-list"></ul>
+
+  <script>
+    const apiKey = 'YOUR_API_KEY';
+    const channelId = 'YOUR_CHANNEL_ID';
+
+    fetch(`https://www.googleapis.com/youtube/v3/search?key=${apiKey}&channelId=${channelId}&part=snippet,id&order=date&maxResults=10`)
+      .then(response => response.json())
+      .then(data => {
+        const list = document.getElementById('video-list');
+        data.items.forEach(item => {
+          const videoId = item.id.videoId;
+          const title = item.snippet.title;
+          const li = document.createElement('li');
+          li.innerHTML = `<a href="https://www.youtube.com/watch?v=${videoId}" target="_blank">${title}</a>`;
+          list.appendChild(li);
+        });
+      });
+  </script>
+</body>
+</html>
