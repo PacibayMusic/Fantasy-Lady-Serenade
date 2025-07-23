@@ -1,0 +1,31 @@
+{
+  "channelName": "Fantasy Lady Serenade",
+  "description": "Ethereal ambient music inspired by Nordic myths, Celtic legends, and forgotten fantasy realms. Ideal for reading, writing, gaming, and escaping reality.",
+  "language": "English",
+  "region": "Global",
+  "category": "Music & Fantasy Ambience",
+  "subscriberCount": 10200,
+  "videoCount": 46,
+  "playlistCount": 7,
+  "lastUpdated": "2025-07-23",
+  "news": [
+    {
+      "date": "2025-07-01",
+      "headline": "🌌 'Frozen in Time' video released!",
+      "summary": "A new fantasy ambient track in Old Norse 432Hz is now live, perfect for deep focus and magical daydreams.",
+      "link": "https://www.youtube.com/watch?v=WyqskKLSlSs"
+    },
+    {
+      "date": "2025-06-15",
+      "headline": "🧝 Enchanted FAE Music added to playlist",
+      "summary": "Inspired by ACOTAR, this new track blends gentle vocals and dreamlike textures for writers and fantasy lovers.",
+      "link": "https://www.youtube.com/watch?v=RaIeYGf-s90"
+    },
+    {
+      "date": "2025-06-01",
+      "headline": "📖 Website launched with curated playlists",
+      "summary": "Fantasy Lady Serenade now lives on GitHub Pages. Explore themed music collections and channel updates anytime.",
+      "link": "https://pacibaymusic.github.io/Fantasy-Lady-Serenade/"
+    }
+  ]
+}
