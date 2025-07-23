@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Curated Playlist</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <a href="index.html">Channel</a> |
+    <a href="playlist.html">Playlist</a> |
+    <a href="custom.html">Custom</a>
+  </nav>
+
+  <h1>💖 Curated Favorites</h1>
+  <ul>
+    <li>
+      <iframe src="https://www.youtube.com/embed/FZvnBlu8rYg" frameborder="0" allowfullscreen></iframe>
+      <p><strong>GOTHIC MUSIC | 432Hz</strong> – Fantasy Lady Serenade</p>
+    </li>
+    <!-- Add more manually below -->
+  </ul>
+</body>
+</html>
