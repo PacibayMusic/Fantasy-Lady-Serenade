@@ -1,7 +1,7 @@
 name: 🔖 Log Manual Update Time
 
 on:
-  workflow_dispatch:  # You trigger this manually in GitHub UI
+  workflow_dispatch:  # Manually triggered from GitHub Actions tab
 
 jobs:
   log-update:
@@ -15,10 +15,13 @@ jobs:
         run: |
           echo "Last updated: $(date -u)" > last-updated.txt
 
-      - name: 📤 Commit timestamp file
+      - name: 🔧 Configure Git
         run: |
           git config --global user.name "GitHub Actions"
           git config --global user.email "github-actions@github.com"
+
+      - name: 📤 Commit timestamp file
+        run: |
           git add last-updated.txt
-          git commit -m "🕒 Updated timestamp file"
+          git commit -m "🕒 Logged manual update time"
           git push
