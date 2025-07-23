@@ -50,6 +50,15 @@
   </style>
 </head>
 <body>
+  <header>
+      <nav>
+    <a href="index.html">Last update</a> |
+    <a href="playlist.html">Playlist</a> |
+    <a href="select.html">Select</a>
+    <a href="channel.html">Channel</a> |
+
+  </nav>
+  </header>
   <div class="container">
     <h1>🎶 Fantasy Lady Serenade</h1>
     <p id="description">Loading channel description...</p>
@@ -59,7 +68,9 @@
     <h2>📰 News Updates</h2>
     <div id="newsContainer"></div>
   </div>
-
+<footer>
+  <div><p><a href="https://www.youtube.com/@FantasyLadySerenade">YouTuBe Change Fantasy Lady Serenade</a></p></div>
+</footer>
   <script>
     fetch('channel.json')
       .then(response => response.json())
