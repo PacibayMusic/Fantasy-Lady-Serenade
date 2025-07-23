@@ -1,18 +1,32 @@
-[
-  {
-    "title": "Frozen in Time ❄️ | Old Norse 432Hz Fantasy Music",
-    "id": "xPqJ7XTGzKg"
-  },
-  {
-    "title": "FAE Island Music – Relaxing Fantasy Soundscape",
-    "id": "LT79mZreA1U"
-  },
-  {
-    "title": "Silent Abbey – Celtic Harp & Female Voices",
-    "id": "rGXGJ4pcD9M"
-  },
-  {
-    "title": "The Nordic Song for the Brave | Ambient Nordic Voices",
-    "id": "ZsqT3VeZFKc"
-  }
-]
+{
+  "playlistTitle": "Frozen Kingdom | Nordic Relaxing Music",
+  "description": "A curated selection of ambient fantasy tracks in Old Norse 432Hz for deep focus and reading.",
+  "source": "YouTube",
+  "playlistUrl": "https://www.youtube.com/playlist?list=PLIfNU8e0FSYcfymK5sYQfJVr_x4qlYNyJ",
+  "tracks": [
+    {
+      "title": "Frozen Kingdom | Nordic Relaxing Music in Old Norse 432HZ",
+      "videoUrl": "https://www.youtube.com/watch?v=WyqskKLSlSs",
+      "duration": "1:02:18",
+      "mood": "Calm, Ethereal, Focused"
+    },
+    {
+      "title": "❄️ Echoes of the Frozen North | Nordic Ambient Music",
+      "videoUrl": "https://www.youtube.com/watch?v=ZT2Z6dDMrVM",
+      "duration": "2:00:01",
+      "mood": "Epic, Immersive, Meditative"
+    },
+    {
+      "title": "Nordic Twilight: A Frozen Fantasy",
+      "videoUrl": "https://www.youtube.com/watch?v=RaIeYGf-s90",
+      "duration": "1:02:32",
+      "mood": "Dreamy, Enchanted, Peaceful"
+    },
+    {
+      "title": "Nordic Fantasy: Relaxing Music With Powerful Female Vocals",
+      "videoUrl": "https://www.youtube.com/watch?v=gnEeWVIlyQg",
+      "duration": "3:00:00",
+      "mood": "Majestic, Emotional, Serene"
+    }
+  ]
+}
