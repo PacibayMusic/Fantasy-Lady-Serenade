@@ -1,27 +1,30 @@
-name: 🔖 Log Manual Update Time
+name: 🚀 Deploy Fantasy Lady Serenade
 
 on:
-  workflow_dispatch:  # Manually triggered from GitHub Actions tab
+  workflow_dispatch:       # Manual trigger in Actions tab
+  push:
+    branches: [main]       # Trigger on changes to main
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
 
 jobs:
-  log-update:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
       - name: 📥 Checkout repository
         uses: actions/checkout@v3
 
-      - name: 🕒 Write timestamp to file
-        run: |
-          echo "Last updated: $(date -u)" > last-updated.txt
+      - name: 📄 Setup GitHub Pages
+        uses: actions/configure-pages@v3
 
-      - name: 🔧 Configure Git
-        run: |
-          git config --global user.name "GitHub Actions"
-          git config --global user.email "github-actions@github.com"
+      - name: 📦 Upload site files
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: .
 
-      - name: 📤 Commit timestamp file
-        run: |
-          git add last-updated.txt
-          git commit -m "🕒 Logged manual update time"
-          git push
+      - name: 🚀 Deploy to GitHub Pages
+        uses: actions/deploy-pages@v2
