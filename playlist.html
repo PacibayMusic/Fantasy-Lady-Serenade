@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fantasy Playlist</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <a href="index.html">Channel</a> |
+    <a href="playlist.html">Playlist</a> |
+    <a href="custom.html">Custom</a>
+  </nav>
+
+  <h1>🎶 Featured Playlist</h1>
+  <ul id="playlist-list"></ul>
+
+  <script>
+    fetch('playlist-videos.json')
+      .then(response => response.json())
+      .then(videos => {
+        const list = document.getElementById('playlist-list');
+        videos.forEach(video => {
+          const li = document.createElement('li');
+          li.innerHTML = `
+            <iframe src="https://www.youtube.com/embed/${video.id}" frameborder="0" allowfullscreen></iframe>
+            <p><strong>${video.title}</strong></p>
+          `;
+          list.appendChild(li);
+        });
+      });
+  </script>
+</body>
+</html>
