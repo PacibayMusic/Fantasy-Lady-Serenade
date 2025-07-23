@@ -1,0 +1,23 @@
+name: 🔄 Log Update Timestamp
+
+on:
+  workflow_dispatch:     # Manual trigger only
+
+jobs:
+  log-update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🕒 Check out repo
+        uses: actions/checkout@v3
+
+      - name: 📝 Write update time to file
+        run: |
+          echo "Last update: $(date -u)" > last-updated.txt
+
+      - name: 📤 Commit timestamp
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "github-actions@github.com"
+          git add last-updated.txt
+          git commit -m "🔖 Logged update timestamp"
+          git push
