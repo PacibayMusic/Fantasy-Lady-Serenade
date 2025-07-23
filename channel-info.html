@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Fantasy Lady Serenade – Channel updates, news, and magical music stats.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fantasy Lady Serenade – Channel Info</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 40px;
+      background: linear-gradient(to right, #3a0d65, #1c264d);
+      font-family: 'Georgia', serif;
+      color: #fff;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    header h1 {
+      font-size: 42px;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 18px;
+      color: #f5f5f5;
+    }
+    nav {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    nav a {
+      margin: 0 10px;
+      color: #ffd700;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+    .highlight {
+      color: #ffd700;
+      font-weight: bold;
+    }
+    .news-entry {
+      background-color: rgba(255,255,255,0.1);
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+    .news-entry a {
+      color: #90eeff;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .news-entry a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🎶 Fantasy Lady Serenade</h1>
+      <p id="description">Loading channel description...</p>
+    </header>
+
+    <nav>
+      <a href="index.html">🏠 Home</a>
+      <a href="playlist.html">🎵 Playlist</a>
+      <a href="select.html">🧝 Select Video</a>
+    </nav>
+
+    <ul id="channelInfo"></ul>
+
+    <h2>📰 News Updates</h2>
+    <div id="newsContainer"></div>
+  </div>
+
+  <script>
+    fetch('channel.json')
+      .then(response => response.json())
+      .then(data => {
+        document.title = data.channelName + " – Channel Info";
+        document.getElementById('description').textContent = data.description;
+
+        const info = document.getElementById('channelInfo');
+        const fields = [
+          { label: "Language", value: data.language },
+          { label: "Region", value: data.region },
+          { label: "Category", value: data.category },
+          { label: "Subscribers", value: data.subscriberCount },
+          { label: "Videos", value: data.videoCount },
+          { label: "Playlists", value: data.playlistCount },
+          { label: "Last Updated", value: data.lastUpdated }
+        ];
+
+        fields.forEach(field => {
+          const li = document.createElement('li');
+          li.innerHTML = `<span class="highlight">${field.label}:</span> ${field.value}`;
+          info.appendChild(li);
+        });
+
+        const newsSection = document.getElementById('newsContainer');
+        data.news.forEach(entry => {
+          const div = document.createElement('div');
+          div.className = 'news-entry';
+          div.innerHTML = `
+            <p><strong>${entry.date}</strong> — <span class="highlight">${entry.headline}</span></p>
+            <p>${entry.summary}</p>
+            <p><a href="${entry.link}" target="_blank">🔗 View More</a></p>
+          `;
+          newsSection.appendChild(div);
+        });
+      })
+      .catch(error => {
+        document.getElementById('description').textContent = 'Failed to load channel data.';
+        console.error('Error loading channel.json:', error);
+      });
+  </script>
+</body>
+</html>
