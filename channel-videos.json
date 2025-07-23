@@ -1,14 +1,32 @@
-[
-  {
-    "title": "GOTHIC MUSIC | 432Hz 4K in Gothic and Latin | A Prison Break",
-    "id": "FZvnBlu8rYg"
-  },
-  {
-    "title": "The Warrior Lady | 432Hz Ambient Music in Gothic and Latin",
-    "id": "QsN93FODqR0"
-  },
-  {
-    "title": "After the Battle – Celtic Lullaby in Irish Gaelic",
-    "id": "6qlXBbBbfgg"
-  }
-]
+{
+  "playlistTitle": "Frozen Kingdom | Nordic Relaxing Music",
+  "description": "A curated selection of ambient fantasy tracks in Old Norse 432Hz for deep focus and reading.",
+  "source": "YouTube",
+  "playlistUrl": "https://www.youtube.com/playlist?list=PLIfNU8e0FSYcfymK5sYQfJVr_x4qlYNyJ",
+  "tracks": [
+    {
+      "title": "Frozen Kingdom | Nordic Relaxing Music in Old Norse 432HZ",
+      "videoUrl": "https://www.youtube.com/watch?v=WyqskKLSlSs",
+      "duration": "1:02:18",
+      "mood": "Calm, Ethereal, Focused"
+    },
+    {
+      "title": "❄️ Echoes of the Frozen North | Nordic Ambient Music",
+      "videoUrl": "https://www.youtube.com/watch?v=ZT2Z6dDMrVM",
+      "duration": "2:00:01",
+      "mood": "Epic, Immersive, Meditative"
+    },
+    {
+      "title": "Nordic Twilight: A Frozen Fantasy",
+      "videoUrl": "https://www.youtube.com/watch?v=RaIeYGf-s90",
+      "duration": "1:02:32",
+      "mood": "Dreamy, Enchanted, Peaceful"
+    },
+    {
+      "title": "Nordic Fantasy: Relaxing Music With Powerful Female Vocals",
+      "videoUrl": "https://www.youtube.com/watch?v=gnEeWVIlyQg",
+      "duration": "3:00:00",
+      "mood": "Majestic, Emotional, Serene"
+    }
+  ]
+}
