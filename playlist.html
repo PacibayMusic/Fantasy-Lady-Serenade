@@ -13,6 +13,16 @@
 
   <h1>🎶 Featured Playlist</h1>
   <ul id="playlist-list"></ul>
+<footer>
+  <p id="update-info"></p>
+  <script>
+    fetch('last-updated.txt')
+      .then(res => res.text())
+      .then(text => {
+        document.getElementById('update-info').textContent = text;
+      });
+  </script>
+</footer>
 
   <script>
     fetch('playlist-videos.json')
