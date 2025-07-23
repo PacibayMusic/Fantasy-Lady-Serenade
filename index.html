@@ -13,7 +13,16 @@
 
   <h1>📺 Latest Channel Uploads</h1>
   <ul id="channel-list"></ul>
-
+<footer>
+  <p id="update-info"></p>
+  <script>
+    fetch('last-updated.txt')
+      .then(res => res.text())
+      .then(text => {
+        document.getElementById('update-info').textContent = text;
+      });
+  </script>
+</footer>
   <script>
     fetch('channel-videos.json')
       .then(response => response.json())
